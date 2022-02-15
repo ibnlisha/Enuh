@@ -8,11 +8,11 @@ const Hoby = () =>  {
     const [image, setImage] = useState();
     const images = [
         {
-            url: 'images/art/art1.png',
+            url: 'images/art/art1.PNG',
             description: 'Pencil drawing of a girl'
         },
         {
-            url: 'images/art/art2.png',
+            url: 'images/art/art2.PNG',
             description: 'Sammurai'
         },
         {
@@ -20,15 +20,15 @@ const Hoby = () =>  {
             description: 'Guy with 6 pack'
         },
         {
-            url: 'images/art/art4.png',
+            url: 'images/art/art4.PNG',
             description: 'Headtie girl'
         },
         {
-            url: 'images/art/art5.png',
+            url: 'images/art/art5.PNG',
             description: 'Couple'
         },
         {
-            url: 'images/art/art6.png',
+            url: 'images/art/art6.PNG',
             description: 'Pencil drawing of a girl'
         },
     ]
