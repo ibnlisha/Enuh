@@ -41,7 +41,7 @@ const Hoby = () =>  {
                     onClick ={e => setImage()}>
                     <FontAwesomeIcon icon = {faTimes} />
                     </span>
-                    <img src={image.url} alt={image.description} className = 'img'/>
+                    <img src={image.url} alt={image.description} className = 'showImage'/>
                 </div>
             </div>}
             <div className="hoby">
