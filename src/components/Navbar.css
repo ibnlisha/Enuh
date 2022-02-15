@@ -1,6 +1,7 @@
 .container {
+  position: relative;
   width: 80%;
-  margin: 3em auto;
+  margin: 1em auto;
   background-color: darkslateblue;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,6 +10,27 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   border-bottom-right-radius: 1.5em;
+}
+
+.container .deco {
+  position: absolute;
+  top: calc(100% - 1em + 2px);
+  border-radius: 40%;
+  width: 0.8em;
+  height: 1em;
+  background-color: white;
+}
+
+.container .d1 {
+  left: calc(100% - 2em);
+}
+
+.container .d2 {
+  left: calc(100% - 3.5em);
+}
+
+.container .d3 {
+  left: calc(100% - 5em);
 }
 
 .nav {
@@ -49,19 +71,32 @@
 }
 
 .nav a:hover {
-  font-size: 1.25em;
+  font-size: 1.21em;
   opacity: 1;
   -webkit-animation: grow 0.5s  forwards ease-out;
           animation: grow 0.5s  forwards ease-out;
+}
+
+.nav a:active {
+  font-size: 1em;
+  background-color: red;
+}
+
+.nav a:visited {
+  background-color: red;
 }
 
 .nav .menuIcon {
   display: none;
   font-size: 2em;
   cursor: pointer;
+  color: lavender;
 }
 
-.nav .nav-items {
+.nav .nav-items, .nav .nav-items-mobile {
+  max-height: 2em;
+  -webkit-transition: max-height 1s ease-in-out;
+  transition: max-height 1s ease-in-out;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -76,7 +111,7 @@
     opacity: 0.8;
   }
   to {
-    font-size: 1.25em;
+    font-size: 1.21em;
     opacity: 1;
   }
 }
@@ -87,33 +122,59 @@
     opacity: 0.8;
   }
   to {
-    font-size: 1.25em;
+    font-size: 1.21em;
     opacity: 1;
   }
 }
 
+@-webkit-keyframes expandTransition {
+  to {
+    display: -webkit-box;
+    display: flex;
+  }
+}
+
+@keyframes expandTransition {
+  to {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  .nav::before {
+    content: '';
+    display: none;
+  }
+  .about div {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+@media screen and (max-width: 780px) {
   .nav {
     opacity: 1;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
   }
-  .nav:before {
-    content: '';
-    display: none;
-  }
   .nav .nav-items {
-    height: 8em;
+    max-height: 10em;
   }
   .nav .nav-items .nav-item {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
+    margin-bottom: 0.2em;
+    padding: 0.3em 0;
+  }
+  .nav .nav-items-mobile {
+    display: none;
   }
   .menuIcon {
     display: block !important;
     margin-right: 0.5em;
-    margin-top: 0.5em;
   }
 }
 /*# sourceMappingURL=Navbar.css.map */

@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faMicroscope, faBlog, faAtom, faShapes } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faMicroscope, faBlog, faAtom, faShapes, faTimes } from '@fortawesome/free-solid-svg-icons'
 import './Navbar.css'
-import { faWindowClose } from '@fortawesome/free-regular-svg-icons';
 
 const Navbar = () => {
-    const [collapsed, setCollapsed] = useState(false);
+    const [collapsed, setCollapsed] = useState(true);
+    const hide = e => setCollapsed(true);
+    // console.log(collapsed)
     return (
         <div className='container'>
             
@@ -21,16 +22,26 @@ const Navbar = () => {
             <div className="menuIcon" 
             onClick = {e => setCollapsed(!collapsed)}
             >
-                <FontAwesomeIcon icon = {collapsed? faWindowClose: faBars}/>
+                <FontAwesomeIcon icon = {!collapsed? faTimes: faBars}/>
             </div>
-            {collapsed &&
-            <ul className = 'nav-items'>
-            <li className = 'nav-item'><Link to = '#'><FontAwesomeIcon icon = {faMicroscope}/>Research</Link></li>
-            <li className = 'nav-item'><Link to = '#'><FontAwesomeIcon icon = {faBlog}/>Blog</Link></li>
-            <li className = 'nav-item'><Link to = '#'><FontAwesomeIcon icon = {faAtom}/>Science Communication</Link></li>
-            <li className = 'nav-item'><Link to = '#'><FontAwesomeIcon icon = {faShapes}/>Hobby</Link></li>
-            </ul>}
+            <ul className = {collapsed? 'nav-items-mobile': 'nav-items'}>
+                <li className = 'nav-item'
+                onClick = {hide}
+                ><Link to = '/research'><FontAwesomeIcon icon = {faMicroscope}/>Research</Link></li>
+                <li className = 'nav-item'
+                 onClick = {hide}
+                ><Link to = '/blog'><FontAwesomeIcon icon = {faBlog}/>Blog</Link></li>
+                <li className = 'nav-item'
+                 onClick = {hide}
+                ><Link to = '/science-communication'><FontAwesomeIcon icon = {faAtom}/>Science Communication</Link></li>
+                <li className = 'nav-item'
+                 onClick = {hide}
+                ><Link to = '/hobby'><FontAwesomeIcon icon = {faShapes}/>Hobby</Link></li>
+            </ul>
         </nav>
+        <div className="deco d1"></div>
+        <div className="deco d2"></div>
+        <div className="deco d3"></div>
         </div>
     );
 }

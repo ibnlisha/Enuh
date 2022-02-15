@@ -1,0 +1,50 @@
+
+.about{
+    // display: flex;
+    // flex-wrap: wrap;
+    font-size: 1.1em;
+    // align-items: center;
+    padding: 0.5em;
+    // background-color: white;
+    *{
+        flex: 1;
+    }
+    .overview{
+        
+        display: flow-root;
+        text-align: left;
+        // flex: 1.5;
+        // text-align: left;
+        // line-gap-override: 2px;
+        padding: 0.5em;
+        background-color: lightgray;
+        img{
+            float: right;
+            margin: 0.5em;
+        }
+    }
+    .header{
+        // font-family: 'Redressed', cursive;
+        font-size: 3em;
+        margin: 0;
+        // font-weight: bold;
+    }
+    .speciality{
+        font-weight: bold;
+    }
+    .intro{
+        font-size: 1.5em;
+    }
+    .text{
+        line-height: 1.5;
+    }
+    .profile{
+        background-color: white;
+    }
+}
+.mainHome{
+    flex: 1;
+}
+.container{
+    margin: 0 auto;
+}

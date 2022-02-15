@@ -1,0 +1,50 @@
+.resr{
+    flex: 1;
+    margin: 0.5em;
+    .canvas{
+        display: flex;
+        // background-color: rgb(39, 36, 36);
+        flex-wrap: wrap;
+        .header, .display{
+            width: 100%;
+            font-size: 2.5em;
+        }
+        .display{
+            margin-bottom: 0;
+        }
+        .header{
+            color: whitesmoke;
+        }
+    }
+    .briefOverview{
+        // color: ;
+        font-size: 1.1em;
+        text-align: left;
+        display:flow-root;
+        padding: .5em;
+        background-color: lightgray;
+        img{
+            float: right;
+            width: 20%;
+            border-radius: 0.5em;
+        }
+    }
+}
+.modal{
+    position: fixed;
+    background-color: #ff00;
+    width: 10vw;
+    height: 100vh;
+
+    .close{
+        text-align: right;
+        margin: 1em;
+        font-size: 2em;
+        cursor: pointer;
+    }
+}
+.jumbotron{
+    text-align: center;
+    color: white;
+    // background-color: red;
+}
