@@ -3,6 +3,17 @@
     .jombutron{
         flex-basis: 100%;
         background-color: aliceblue;
+        background-image: url('../assets/study.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20em;
+        h2{
+            width: 60%;
+            // color: whitesmoke;
+        }
     }
     .blogs{
         flex-basis: 70%;
@@ -11,6 +22,9 @@
         .blogItems{
             display: flex;
             flex-wrap: wrap;
+            a{
+                text-decoration: none;
+            }
         }
     }
     .selected{

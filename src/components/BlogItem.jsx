@@ -23,7 +23,7 @@ const BlogItem = ({title, coverImage, id,
                     fontSize: '0.8em',
                     }}>
                     <span>{author} |</span>
-                    <span>{`${months[date.getMonth()]}, ${date.getFullYear()}`} |</span>
+                    <span>{`${months[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`} |</span>
                     <span>{category} |</span>
                     <span>{comments.length} Comments</span>
                 </p>

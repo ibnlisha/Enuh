@@ -7,7 +7,8 @@
   background-color: aliceblue;
   padding: 1em 2em;
   margin: 1em;
-  border-radius: 1em;
+  border-top-left-radius: 0.8em;
+  border-top-right-radius: 0.8em;
 }
 
 .hoby .header {

@@ -14,7 +14,7 @@ const Blog = () =>  {
             highlight: 'Have you ever stayed stuck on a task for hours without any visible or measurable progress? Often, you have tried every option you know',
             comments: [],
             category: 'Uncategorized',
-            reads: ''
+            reads: 0
         },
         {
             id: uuid(),
@@ -26,7 +26,7 @@ const Blog = () =>  {
             comments: [],
             category: 'Motivation',
             text: '',
-            reads: ''
+            reads: 0
         }
     ]
     return(
@@ -43,7 +43,7 @@ const Blog = () =>  {
             </section>
             <aside className="selected">
                 <h1 className="header">Trending</h1>
-                <p><span>Week</span> | <span>Month</span></p>
+                <p><span><strong>This week</strong></span> | <span><strong>This month</strong></span></p>
                 <div className="pBlogs">
                     Popular blogs will come here
                 </div>
