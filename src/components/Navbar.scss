@@ -49,17 +49,17 @@
         padding: 8px 12px;
 
         &:hover{
-            font-size: 1.21em;
+            font-size: 1.205em;
             opacity: 1;
             animation: grow 0.5s  forwards ease-out;
         }
-        &:active{
-            font-size: 1em; //not working
-            background-color: red;
-        }
-        &:visited{
-            background-color: red;
-        }
+        // &:active{
+        //     // font-size: 1em; //not working
+        //     background-color: red;
+        // }
+        // &:visited{
+        //     background-color: red;
+        // }
       }
       .menuIcon{
           display: none;
@@ -82,7 +82,7 @@
         opacity: 0.8;
     }
     to{
-        font-size: 1.21em;
+        font-size: 1.205em;
         opacity: 1;
     }
 }

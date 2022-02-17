@@ -1,0 +1,36 @@
+.container{
+    flex-wrap: wrap;
+    .jombutron{
+        flex-basis: 100%;
+        background-color: aliceblue;
+    }
+    .blogs{
+        flex-basis: 70%;
+        background-color: aliceblue;
+
+        .blogItems{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .selected{
+        box-sizing: border-box;
+        width: 30%;
+        background-color: lavender;
+        height: fit-content;
+        border-radius: 0.5em;
+        padding: 1em;
+        input{
+            width: calc(100% - 2em);
+            font-size: 1.2em;
+            border-radius: 0.2em;
+            padding: 5px 8px;
+            margin-bottom: 0.3em;
+        }
+        input[type = 'submit']{
+            width: fit-content;
+            padding: 0.3em 1em;
+            background-color: aquamarine;
+        }
+    }
+}

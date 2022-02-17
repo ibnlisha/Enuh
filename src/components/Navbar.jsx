@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {Link} from 'react-router-dom'
+import {Link, useLocation} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faMicroscope, faBlog, faAtom, faShapes, faTimes } from '@fortawesome/free-solid-svg-icons'
 import './Navbar.css'
@@ -7,7 +7,30 @@ import './Navbar.css'
 const Navbar = () => {
     const [collapsed, setCollapsed] = useState(true);
     const hide = e => setCollapsed(true);
-    // console.log(collapsed)
+    const location = useLocation();
+
+    const navs = [
+        {
+            name: 'Research',
+            pathname: '/research',
+            icon: faMicroscope
+        },
+        {
+            name: 'Blog',
+            pathname: '/blog',
+            icon: faBlog
+        },
+        {
+            name: 'Science Communication',
+            pathname: '/science-communication',
+            icon: faAtom
+        },
+        {
+            name: 'Hobby',
+            pathname: '/hobby',
+            icon: faShapes
+        }
+    ]
     return (
         <div className='container'>
             
@@ -25,18 +48,14 @@ const Navbar = () => {
                 <FontAwesomeIcon icon = {!collapsed? faTimes: faBars}/>
             </div>
             <ul className = {collapsed? 'nav-items-mobile': 'nav-items'}>
-                <li className = 'nav-item'
-                onClick = {hide}
-                ><Link to = '/research'><FontAwesomeIcon icon = {faMicroscope}/>Research</Link></li>
-                <li className = 'nav-item'
-                 onClick = {hide}
-                ><Link to = '/blog'><FontAwesomeIcon icon = {faBlog}/>Blog</Link></li>
-                <li className = 'nav-item'
-                 onClick = {hide}
-                ><Link to = '/science-communication'><FontAwesomeIcon icon = {faAtom}/>Science Communication</Link></li>
-                <li className = 'nav-item'
-                 onClick = {hide}
-                ><Link to = '/hobby'><FontAwesomeIcon icon = {faShapes}/>Hobby</Link></li>
+                {navs.map(({name, pathname, icon}) => 
+                <li onClick = {hide}
+                className='nav-item'><Link to = {pathname} style = {{
+                    backgroundColor: pathname === location.pathname? 'maroon': 'inherit'
+                }}>
+                <FontAwesomeIcon icon = {icon} />{name}
+                </Link></li>
+                )}
             </ul>
         </nav>
         <div className="deco d1"></div>

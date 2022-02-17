@@ -71,19 +71,10 @@
 }
 
 .nav a:hover {
-  font-size: 1.21em;
+  font-size: 1.205em;
   opacity: 1;
   -webkit-animation: grow 0.5s  forwards ease-out;
           animation: grow 0.5s  forwards ease-out;
-}
-
-.nav a:active {
-  font-size: 1em;
-  background-color: red;
-}
-
-.nav a:visited {
-  background-color: red;
 }
 
 .nav .menuIcon {
@@ -111,7 +102,7 @@
     opacity: 0.8;
   }
   to {
-    font-size: 1.21em;
+    font-size: 1.205em;
     opacity: 1;
   }
 }
@@ -122,7 +113,7 @@
     opacity: 0.8;
   }
   to {
-    font-size: 1.21em;
+    font-size: 1.205em;
     opacity: 1;
   }
 }
