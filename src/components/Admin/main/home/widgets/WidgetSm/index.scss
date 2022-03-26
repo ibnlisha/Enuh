@@ -1,0 +1,42 @@
+.wgSm{
+    flex: 1;
+    box-shadow: 0 0 15px -10px rgba(0,0,0,0.7);
+    padding: 0.8em 1em;
+
+    .widgetList {
+        list-style-type: none;
+
+        .widgetListItem{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 1em 0;
+
+            .userProfile{
+                width: 2.5em;
+                border-radius: 50%;
+            }
+
+            .widgetContainer{
+                display: flex;
+                flex-direction: column;
+
+                .username{
+                    font-weight: 600;
+                }
+                .job{
+                    font-weight: 300;
+                    color: blue;
+                }
+            }
+            .btn{
+                border: none;
+                border-radius: 0.6em;
+                padding: 0.7em 1em;
+                background-color: #eeeef7;
+                color: #555;
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-enuh",
+  "name": "enuh",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,13 +8,21 @@
     "@fortawesome/free-regular-svg-icons": "^6.0.0-beta3",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.17",
+    "@reduxjs/toolkit": "^1.8.0",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
+    "@tinymce/tinymce-react": "^3.13.1",
+    "axios": "^0.26.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-image-crop": "^9.1.1",
+    "react-moment": "^1.1.1",
+    "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
+    "react-table": "^7.7.0",
+    "recharts": "^2.1.9",
     "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
@@ -24,6 +32,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://enuh-server.herokuapp.com/",
   "eslintConfig": {
     "extends": [
       "react-app",

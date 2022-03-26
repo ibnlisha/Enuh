@@ -1,0 +1,63 @@
+.container{
+    flex-wrap: wrap;
+    .jombutron{
+        flex-basis: 100%;
+        background-color: aliceblue;
+        background-image: url('../../assets/study.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20em;
+        h2{
+            width: 60%;
+            // color: whitesmoke;
+        }
+    }
+    .blogs{
+        flex-basis: 70%;
+        background-color: aliceblue;
+
+        .blogItems{
+            display: flex;
+            flex-wrap: wrap;
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    .selected{
+        box-sizing: border-box;
+        width: 30%;
+        background-color: lavender;
+        height: fit-content;
+        border-radius: 0.5em;
+        padding: 1em;
+        input{
+            width: calc(100% - 2em);
+            font-size: 1.2em;
+            border-radius: 0.2em;
+            padding: 5px 8px;
+            margin-bottom: 0.3em;
+        }
+        input[type = 'submit']{
+            width: fit-content;
+            padding: 0.3em 1em;
+            background-color: aquamarine;
+        }
+    }
+    .blog{
+        padding: 1.5em;
+        background-color: whitesmoke;
+        margin: 0.5em;
+        text-align: left;
+        h1{
+            // background-color: steelblue;
+            // color: whitesmoke !important;
+            padding: 0.5em 1em;
+            border-radius: 0.4em;
+            box-shadow: 0 0 15px -10px rgba(0,0,0, 0.7);
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.home{
+    padding-top: 2em;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .featuredItem{
+        flex: 1;
+        margin: 0 1em;
+        padding: 1em;
+        border-radius: 0.8em;
+        cursor: pointer;
+        box-shadow: 0 0 15px -10px rgba(0,0,0,0.7);
+
+        .featuredTitle{
+            font-size: 1.5em;
+        }
+        .featuredMoneyContainer{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .featuredMoneyRate{
+                font-size: .6em;
+                margin-left: 1em;
+            }
+            .positive{
+                color: green;
+            }
+            .negative{
+                color: red;
+            }
+        } 
+    }
+}

@@ -1,12 +1,19 @@
 // import {Link} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPhone } from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faLinkedin, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () =>{
+    const atg = {
+        color: 'white',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+    }
     const brandsStyle = {
         color: 'white',
         fontSize: '2em',
+        marginRight: '0.2em',
     }
     const margin = {
         margin: '1em'
@@ -42,7 +49,12 @@ const Footer = () =>{
                 <hr />
                 <div style={grow}>
                     <h4>Contact us Here</h4>
-                    <a href = 'tel:+90543*******' style ={{color: 'white'}}><FontAwesomeIcon icon={faPhone} style = {brandsStyle}/>+90 543 *** ****</a>
+                    <a href = 'tel:+90543*******' style ={atg}>
+                        <FontAwesomeIcon icon={faPhone} style = {brandsStyle}/>
+                        +90 543 *** ****</a><br />
+                    <a href = 'mailto:enuhblaise@yahoo.com' 
+                    style ={atg}><FontAwesomeIcon icon={faEnvelope} 
+                    style = {brandsStyle}/>enuhblaise@yahoo.com</a>
                 </div>
                 <hr />
                 <div style={grow}>

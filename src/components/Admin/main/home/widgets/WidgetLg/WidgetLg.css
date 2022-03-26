@@ -1,0 +1,59 @@
+.wgLg {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  margin: 0 2em;
+  -webkit-box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.7);
+          box-shadow: 0 0 15px -10px rgba(0, 0, 0, 0.7);
+}
+
+.wgLg .wgTable {
+  width: 100%;
+  border-spacing: 1em;
+  text-align: left;
+}
+
+.wgLg .wgTable .userInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 600;
+}
+
+.wgLg .wgTable .userInfo .wgTdImg {
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-right: 0.8em;
+}
+
+.wgLg .wgTable .tdAmount, .wgLg .wgTable .tdDate {
+  font-weight: 300;
+}
+
+.wgLg .wgTable .wgTd .wgLgBtn {
+  border: none;
+  border-radius: 0.5em;
+  padding: 0.7em 1em;
+}
+
+.wgLg .wgTable .wgTd .Approved {
+  background-color: #e5faf2;
+  color: #3bb077;
+}
+
+.wgLg .wgTable .wgTd .Pending {
+  background-color: #ebf1fe;
+  color: #2a7ade;
+}
+
+.wgLg .wgTable .wgTd .Declined {
+  background-color: #fff0f1;
+  color: #d95087;
+}
+/*# sourceMappingURL=WidgetLg.css.map */

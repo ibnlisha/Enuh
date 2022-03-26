@@ -1,0 +1,47 @@
+.research{
+    flex: 1;
+    margin: 1em;
+    .intro{
+        padding: 1em;
+        display: flow-root;
+        text-align: left;
+        font-size: 1.1em;
+        background-color: aliceblue;
+
+        .microscope{
+            float: right;
+            width: 30%;
+            margin: 0.5em;
+            border-radius: 0.5em;
+        }
+    }
+    .publications{
+        width: 100%;
+        position: relative;
+        background-color: aliceblue;
+        display: flex;
+        flex-wrap: wrap;
+        &:hover .chev{
+            opacity: 1;
+        }
+        .chev{
+            cursor: pointer;
+            font-size: 2em;
+            position: absolute;
+            top: calc(50% - 1em);
+            opacity: 0.5;
+        }
+        .chevronLeft{
+            left: 0.5em;
+        }
+        .chevronRight{
+            left: calc(100% - 1em);
+        }
+    }
+    .header{
+        background-color: steelblue;
+        color: whitesmoke;
+        font-size: 2.5em;
+        padding: 0 2em;
+    }
+}

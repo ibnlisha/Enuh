@@ -1,0 +1,21 @@
+.sideBar .sidebarwrapper{
+    position: sticky;
+    height: calc(100vh - 70px);
+    text-align: left;
+    padding: 0.8em;
+    .sidebarTitle{
+        color: lightslategray;
+    }
+    .sidebarList{
+        list-style-type: none;
+        .sidebarListItem{
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        .sidebarListItem:active, .sidebarListItem:hover{
+            text-decoration: underline;
+            opacity: 1;
+        }
+    }
+}

@@ -2,5 +2,42 @@
   text-align: center;
 }
 
-
-
+.link{
+  text-decoration: none;
+}
+.btn{
+  border: none;
+  color: whitesmoke;
+  cursor: pointer;
+  padding: 0.5em 1em;
+  font-size: 1em;
+  margin: 0.5em 0;
+  border-radius: 0.25em;
+  background-color: steelblue;
+  width: fit-content;
+}
+.danger{
+  color: white;
+  background-color: #d11a2a;
+}
+.tooltip{
+  position: relative;
+}
+.tooltip:hover .tooltipText{
+  display: inline-block;
+}
+.tooltipText{
+  position: absolute;
+  background-color: aliceblue;
+  z-index: 1;
+  display: none;
+  transform: translate(-120%, 80%);
+}
+.formControl {
+  width: calc(100% - 1em);
+    font-size: 1em;
+    margin-bottom: 0.5em;
+    border: none;
+    box-shadow: 0 0 15px -10px rgba(0,0,0, 0.7);
+    padding: 0.5em;
+}
