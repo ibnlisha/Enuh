@@ -60,7 +60,12 @@ const AdminPage = () => {
                 <span className="badge">19+</span>
                 </li>
                 <li className='profile'><FontAwesomeIcon icon = {faCog} /></li>
+                {isAuthenticated?
                 <li className='profile'><FontAwesomeIcon icon = {faUser} /></li>
+                :<li><button 
+                onClick={()=>dispatch(addCurrentUser({}))}
+                className='btn outline'>Logout</button></li>
+              }
             </nav>
         </div>
         <main className="main">
