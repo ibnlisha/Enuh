@@ -16,6 +16,11 @@
   background-color: steelblue;
   width: fit-content;
 }
+.outline{
+  border: 1px solid steelblue;
+  background-color: whites;
+  color: black;
+}
 .danger{
   color: white;
   background-color: #d11a2a;
