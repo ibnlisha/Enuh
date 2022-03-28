@@ -8,7 +8,7 @@ export const userSlice = createSlice({
     },
     reducers: {
         addCurrentUser: (state, action) => {
-            state.isAuthenticated = !!Object.keys(action.payload.userInfo)
+            state.isAuthenticated = !!Object.keys(action.payload.userInfo).length
             state.userInfo = action.payload.userInfo
         },
         removeCurrentUser: (state)=>{
