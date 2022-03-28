@@ -63,7 +63,10 @@ const AdminPage = () => {
                 <li className='profile'><FontAwesomeIcon icon = {faUser} /></li>
                 {isAuthenticated &&
                 <li><button 
-                onClick={()=>dispatch(addCurrentUser({userInfo: {}}))}
+                onClick={()=>{
+                  dispatch(addCurrentUser({userInfo: {}}))
+                  setIsAuthenticated(false)
+                }}
                 className='btn outline'>Logout</button></li>
               }
             </nav>
