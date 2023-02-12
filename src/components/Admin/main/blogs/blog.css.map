@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,MAAM,CAAA;EACN,gBAAgB,EAAE,KAAK;CACtB",
-    "sources": [
-        "blog.scss"
-    ],
-    "names": [],
-    "file": "blog.css"
-}
+{"version":3,"sources":["blog.scss","blog.css"],"names":[],"mappings":"AAAA;EACA,uBAAA;ACCA","file":"blog.css"}

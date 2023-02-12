@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,EAAE,AAAA,UAAW,CAAA,IAAI,EAAC;EACd,gBAAgB,EAAE,SAAS;CAC9B",
-    "sources": [
-        "Arts.scss"
-    ],
-    "names": [],
-    "file": "Arts.css"
-}
+{"version":3,"sources":["Arts.scss","Arts.css"],"names":[],"mappings":"AAAA;EACI,2BAAA;ACCJ","file":"Arts.css"}

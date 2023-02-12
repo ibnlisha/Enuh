@@ -1,39 +1,28 @@
 .resr {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   margin: 0.5em;
 }
-
 .resr .canvas {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
-
 .resr .canvas .header, .resr .canvas .display {
   width: 100%;
   font-size: 2.5em;
 }
-
 .resr .canvas .display {
   margin-bottom: 0;
 }
-
 .resr .canvas .header {
   color: whitesmoke;
 }
-
 .resr .briefOverview {
   font-size: 1.1em;
   text-align: left;
   display: flow-root;
-  padding: .5em;
+  padding: 0.5em;
   background-color: lightgray;
 }
-
 .resr .briefOverview img {
   float: right;
   width: 20%;
@@ -42,11 +31,10 @@
 
 .modal {
   position: fixed;
-  background-color: #ff00;
+  background-color: rgba(255, 255, 0, 0);
   width: 10vw;
   height: 100vh;
 }
-
 .modal .close {
   text-align: right;
   margin: 1em;
@@ -57,5 +45,4 @@
 .jumbotron {
   text-align: center;
   color: white;
-}
-/*# sourceMappingURL=ScienceCommunication.css.map */
+}/*# sourceMappingURL=ScienceCommunication.css.map */

@@ -2,53 +2,40 @@
   font-size: 1.1em;
   padding: 0.5em;
 }
-
 .about * {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
 .about .overview {
   display: flow-root;
   text-align: left;
   padding: 0.5em;
   background-color: lightgray;
 }
-
 .about .overview img {
   float: right;
   margin: 0.5em;
 }
-
 .about .header {
   font-size: 3em;
   margin: 0;
 }
-
 .about .speciality {
   font-weight: bold;
 }
-
 .about .intro {
   font-size: 1.5em;
 }
-
 .about .text {
   line-height: 1.5;
 }
-
 .about .profile {
   background-color: white;
 }
 
 .mainHome {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 
 .container {
   margin: 0 auto;
-}
-/*# sourceMappingURL=HomeMain.css.map */
+}/*# sourceMappingURL=HomeMain.css.map */
