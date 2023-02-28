@@ -30,7 +30,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.2em;
+  font-size: 1.1em;
   flex-grow: 1;
 }
 .nav:before {
@@ -46,14 +46,13 @@
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
   margin: 1px;
-  color: red;
+  color: lavender;
   opacity: 0.8;
   padding: 8px 12px;
 }
 .nav a:hover {
-  font-size: 1.205em;
   opacity: 1;
-  animation: grow 0.5s forwards ease-out;
+  animation: grow 0.2s forwards ease-out;
 }
 .nav .menuIcon {
   display: none;
@@ -71,7 +70,7 @@
 
 @keyframes grow {
   from {
-    font-size: 1.2em;
+    font-size: 1.1em;
     opacity: 0.8;
   }
   to {

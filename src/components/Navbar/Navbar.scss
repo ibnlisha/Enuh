@@ -29,7 +29,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.2em;
+    font-size: 1.1em;
     flex-grow: 1;
     &:before{
         content: '';
@@ -44,15 +44,15 @@
         border-top-left-radius: .5em;
         border-top-right-radius: .5em;
         margin: 1px;
-        // color: lavender;
-        color: red;
+        color: lavender;
+        // color: red;
         opacity: 0.8;
         padding: 8px 12px;
 
         &:hover{
-            font-size: 1.205em;
+            // font-size: 1.205em;
             opacity: 1;
-            animation: grow 0.5s  forwards ease-out;
+            animation: grow 0.2s  forwards ease-out;
         }
         // &:active{
         //     // font-size: 1em; //not working
@@ -79,7 +79,7 @@
 
 @keyframes grow {
     from{
-        font-size: 1.2em;
+        font-size: 1.1em;
         opacity: 0.8;
     }
     to{

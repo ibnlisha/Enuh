@@ -7,8 +7,8 @@ body {
     /* font-family: montserat; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 18px;
-  line-height: 1.5;
+  /* font-size: 18px; */
+  /* line-height: 1.5; */
 }
 
 code {
