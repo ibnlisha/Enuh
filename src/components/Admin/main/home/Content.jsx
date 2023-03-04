@@ -1,7 +1,7 @@
 import Charts from '../pages/home/charts/Charts'
 import Home from '../pages/home/Home'
-import WidgetSm from './widgets/WidgetSm'
-import WidgetLg from './widgets/WidgetLg'
+// import WidgetSm from './widgets/WidgetSm'
+// import WidgetLg from './widgets/WidgetLg'
 
 const Content = () => {
   const data = [
@@ -65,8 +65,8 @@ const Content = () => {
           width: '100%',
           // color: 'red'
         }}>
-          <WidgetSm />
-          <WidgetLg />
+          {/* <WidgetSm />
+          <WidgetLg /> */}
         </div>
     </section>
   )

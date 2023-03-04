@@ -4,7 +4,7 @@ import axios from 'axios'
 import React, { useRef, useState, } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import ReactCrop from 'react-image-crop'
+import ReactCrop, {makeAspectCrop, centerCrop, Crop} from 'react-image-crop'
 import 'react-image-crop/dist/ReactCrop.css'
 import getCroppedImage from './getCroppedImage'
 
@@ -18,7 +18,8 @@ const GraphicForm = ({formTitle, apiName, aspect,
         article_path: '',
         date_of_publication: new Date()
     })
-    const [crop, setCrop] = useState({unit: '%',aspect})
+    const [crop, setCrop] = useState(Crop)
+    const [completedCrop, setCompletedCrop] = useState()
     const [imgSrc, setImgSrc] = useState('')
     const [previewUrl, setPreviewUrl] = useState('')
     const [show, setShow] = useState(false)
@@ -65,20 +66,24 @@ const GraphicForm = ({formTitle, apiName, aspect,
         temp[e.target.name] = e.target.value
         setData(temp)
     }
-    const onload = image => {
-        imgRef.current = image
-        const {width, height} = image
-        const cropwidth = width / aspect < height ? 100 : (height * aspect)/width * 100
-        const cropheight = height * aspect < width ? 100 : (width / aspect)/height * 100
-        const x = (100 - cropwidth) / 2
-        const y = (100 - cropheight) / 2
-        setCrop({
-            unit: '%',
+    const onload = e => {
+        const { naturalWidth: width, naturalHeight: height } = e.currentTarget;
+
+        const crop = centerCrop(
+            makeAspectCrop(
+            {
+                unit: '%',
+                width: 90,
+            },
             aspect,
-            width: cropwidth,
-            height: cropheight,
-            x,y,
-        })
+            width,
+            height
+            ),
+            width,
+            height
+        )
+
+  setCrop(crop)
     }
   return (
     <div style = {{
@@ -115,18 +120,25 @@ const GraphicForm = ({formTitle, apiName, aspect,
                     margin: '0 auto',
                     flexDirection: 'column'}}>
                         <h1>Crop image</h1>
-                        <ReactCrop crop={crop} 
+                        {/* crope the image before upload */}
+                        {/* <ReactCrop crop={crop} 
+                        aspect = {aspect}
                         onChange = {(_,pc) => setCrop(pc)}
                         onComplete = {(_,pc) => setCrop(pc)} 
                         src={imgSrc}
                         ruleOfThirds 
                         onImageLoaded={onload}
                         imageStyle = {{maxHeight: 'calc(100vh - 10em)'}}
-                        />
+                        /> */}
+                        <ReactCrop crop = {crop} aspect={aspect} 
+                        onComplete = {c => setCompletedCrop(c)}
+                        onChange = {(_,pc) => setCrop(pc)}>
+                            <img ref = {imgRef} src={imgSrc} alt='file to be uploaded' onLoad={onload}/>
+                        </ReactCrop>
                         <button className='btn' 
                         type='button'
                         onClick ={async ()=>{
-                            const blob = await getCroppedImage(imgRef.current, crop, 'upload.png')
+                            const blob = await getCroppedImage(imgRef.current, completedCrop, 'upload.png')
                             const temp = {...data}
                             temp.image_file = blob
                             setData(temp)

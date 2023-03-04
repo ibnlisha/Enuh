@@ -16,11 +16,11 @@
     "axios": "^0.26.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-image-crop": "^9.1.1",
+    "react-image-crop": "^10.0.9",
     "react-moment": "^1.1.1",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
-    "react-scripts": "5.0.0",
+    "react-scripts": "^5.0.1",
     "react-table": "^7.7.0",
     "recharts": "^2.1.9",
     "uuid": "^8.3.2",
@@ -32,7 +32,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "proxy": "http://localhost:8080/",
+  "proxy": "https://enuh-api.up.railway.app/",
   "eslintConfig": {
     "extends": [
       "react-app",

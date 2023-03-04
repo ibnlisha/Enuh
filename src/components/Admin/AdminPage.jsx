@@ -1,5 +1,5 @@
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faGlobe, faUser, faBell, faCog,} from '@fortawesome/free-solid-svg-icons'
+import { faBell,} from '@fortawesome/free-solid-svg-icons'
 import './Admin.css'
 import Sidebar from './sidebar/Sidebar'
 import Content from './main/home/Content'
@@ -51,16 +51,16 @@ const AdminPage = () => {
         <div className="topBar">
             <div className="brand">Enuh</div>
             <nav className="nav">
-                <li
+                {/* <li
                 className = 'notifn'
                 ><FontAwesomeIcon icon = {faGlobe} />
                 <span className="badge">19+</span>
-                </li>
+                </li> */}
                 <li className = 'notifn'><FontAwesomeIcon icon = {faBell} />
                 <span className="badge">19+</span>
                 </li>
-                <li className='profile'><FontAwesomeIcon icon = {faCog} /></li>
-                <li className='profile'><FontAwesomeIcon icon = {faUser} /></li>
+                {/* <li className='profile'><FontAwesomeIcon icon = {faCog} /></li> */}
+                {/* <li className='profile'><FontAwesomeIcon icon = {faUser} /></li> */}
                 {isAuthenticated &&
                 <li><button 
                 onClick={()=>{

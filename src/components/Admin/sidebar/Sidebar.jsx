@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faBlog, faChartLine, faComments, faDraftingCompass, faEnvelope, 
+import {faBlog, faComments, faDraftingCompass, faEnvelope, 
      faHandPaper, faPencilAlt, faRssSquare, 
     faTh, faUsers} from '@fortawesome/free-solid-svg-icons'
 import './Sidebar.css';
@@ -18,10 +18,10 @@ const Sidebar = () => {
                             Home
                         </Link>
                     </li>
-                    <li className="sidebarListItem">
+                    {/* <li className="sidebarListItem">
                         <FontAwesomeIcon icon = {faChartLine}/>
                         Analysis
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             <div className="sidebarMenu">
